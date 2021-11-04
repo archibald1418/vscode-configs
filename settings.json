@@ -1,0 +1,10 @@
+{
+	"files.associations": {
+		"libft.h": "c",
+		"lexer.h": "c",
+		"string": "c",
+		"string_view": "c",
+		"stdio.h": "c",
+		"minishell.h": "c"
+	}
+}

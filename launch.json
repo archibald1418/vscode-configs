@@ -1,0 +1,14 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug",
+			"program": "/Users/user/42cursus/minishell/minishell/tests/test",
+			"args": [],
+			"cwd": "/Users/user/42cursus/minishell/minishell/tests",
+			"preLaunchTask": "lexertest"
+		},
+	]
+}
