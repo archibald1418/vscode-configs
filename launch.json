@@ -4,11 +4,20 @@
 		{
 			"type": "lldb",
 			"request": "launch",
-			"name": "Debug",
-			"program": "/Users/user/42cursus/minishell/minishell/tests/test",
+			"name": "Lexer debug",
+			"program": "${workspaceFolder}/minishell/tests/test",
 			"args": [],
-			"cwd": "/Users/user/42cursus/minishell/minishell/tests",
+			"cwd": "${workspaceFolder}/minishell/tests",
 			"preLaunchTask": "lexertest"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Parser debug",
+			"program": "${workspaceFolder}/minishell/tests/test",
+			"args": [],
+			"cwd": "${workspaceFolder}/minishell/tests",
+			"preLaunchTask": "validationtest"
 		},
 	]
 }
