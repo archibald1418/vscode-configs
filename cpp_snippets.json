@@ -2,7 +2,7 @@
 	"Include guard":{
 		"prefix": ["ifn", "guard", "include_guard", "include"],
 		"body": [
-			"#ifndef ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H", // capitalizing filename for a header
+			"#ifndef ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H",
 			"# define ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H\n",
 			"$0\n",
 			"#endif"
@@ -11,19 +11,19 @@
 	"Setter":{
 		"prefix": ["setter", "Setter"],
 		"body": [
-			"set${1:/*attr_name*/}(${2:/*arg*/})", // Selecting text and setting its cursor
+			"void set_${2:/*argName*/}(${1:/*argType*/} ${2:/*argName*/})", // Selecting text and setting its cursor
 			"{",
-			"\treturn (this->${2:/*arg*/});",
+			"\tthis->${2:/*argName*/} = ${2:/*argName*/};",
 			"}",
 		]
 	},
 	"Getter":{
 		"prefix": ["Getter", "getter"],
 		"body": [
-			"get${1:/*attr_name*/}(${2:/*arg*/})", // Selecting text and getting its cursor
+			"${1:/*argType*/} get_${2:/*argName*/}(${1:/*argType*/} ${2:/*argName*/})",
 			"{",
-			"\treturn (this->${2:/*arg*/});",
-			"}",
+			"\treturn (this->${2:/*argName*/});",
+			"}"
 		]
 	}
 	// Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and 
