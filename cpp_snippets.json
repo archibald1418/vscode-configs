@@ -2,7 +2,7 @@
 	"Include guard":{
 		"prefix": ["ifn", "guard", "include_guard", "include"],
 		"body": [
-			"#ifndef ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H",
+			"#ifndef ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H", // capitalizing filename for a header
 			"# define ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H\n",
 			"$0\n",
 			"#endif"
