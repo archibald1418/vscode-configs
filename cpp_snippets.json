@@ -11,29 +11,50 @@
 	"Setter":{
 		"prefix": ["setter", "Setter"],
 		"body": [
-			"void set_${2:/*argName*/}(${1:/*argType*/} ${2:/*argName*/})", // Selecting text and setting its cursor
+			"void $TM_FILENAME_BASE::set_${3:/*argName*/}(${2:/*argType*/} ${3:/*argName*/})", // Selecting text and setting its cursor
 			"{",
-			"\tthis->${2:/*argName*/} = ${2:/*argName*/};",
-			"}",
+			"\tthis->${3:/*argName*/} = ${3:/*argName*/};",
+			"}\n",
 		]
 	},
 	"Getter":{
 		"prefix": ["Getter", "getter"],
 		"body": [
-			"${1:/*argType*/} get_${2:/*argName*/}(${1:/*argType*/} ${2:/*argName*/})const",
+			"${2:/*argType*/} $TM_FILENAME_BASE::get_${3:/*argName*/}()const",
 			"{",
-			"\treturn (this->${2:/*argName*/});",
+			"\treturn (this->${3:/*argName*/});",
 			"}"
 		]
 	},
 	"GetterPrototype":{
-		"prefix": ["getter_prototype", "Getter_prototype"],
-		"body": "${1:/*argType*/} get_${2:/*argName*/}(${1:/*argType*/} ${2:/*argName*/})const;"
+		"prefix": ["getter_prototype", "Getter_prototype", "prototye_getter"],
+		"body": "${3:/*argType*/} get_${4:/*argName*/}()const;\n"
 	},
 	"SetterPrototype":{
-		"prefix": ["setter_prototype", "Setter_prototype"],
-		"body": "void set_${2:/*argName*/}(${1:/*argType*/} ${2:/*argName*/});"
+		"prefix": ["setter_prototype", "Setter_prototype", "prototype_setter"],
+		"body": "void set_${4:/*argName*/}(${3:/*argType*/} ${4:/*argName*/});\n"
+	},
+	"Getset_prototype":{
+		"prefix":["getset_prototype", "prototype_getset"],
+		"body":[
+			"void set_${4:/*argName*/}(${3:/*argType*/} ${4:/*argName*/});",
+			"${3:/*argType*/} get_${4:/*argName*/}()const;"
+		]
+	},
+	"Getset":{
+		"prefix":	["Getset", "GetterSetter", "SetterGetter"],
+		"body": [
+			"void $TM_FILENAME_BASE::set_${3:/*argName*/}(${2:/*argType*/} ${3:/*argName*/})", // Selecting text and setting its cursor
+			"{",
+			"\tthis->${3:/*argName*/} = ${3:/*argName*/};",
+			"}\n",
+			"$TM_FILENAME_BASE::${2:/*argType*/} get_${3:/*argName*/}()const",
+			"{",
+			"\treturn (this->${3:/*argName*/});",
+			"}"
+		]
 	}
+
 
 	// Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and 
 	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
