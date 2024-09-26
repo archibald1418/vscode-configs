@@ -1,0 +1,12 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "alt+d",
+        "command": "workbench.debug.action.focusRepl"
+    },
+    {
+        "key": "alt+d",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "inDebugRepl"
+    },
+]
